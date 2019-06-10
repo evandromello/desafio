@@ -26,7 +26,8 @@ namespace DesafioSouthSystem.Controllers
 
             foreach (string file in files)
             {
-                ProcessDatFile.ReadAndWriteDatFile(file);
+                if (Path.GetExtension(file) == ".dat")
+                    ProcessDatFile.ReadAndWriteDatFile(file);
             }
         }
     }
